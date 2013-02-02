@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B6EC650-5C83-4B32-B11D-D8E79D958FD9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sphinx.Client.UnitTests</RootNamespace>
+    <AssemblyName>Sphinx.Client.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Moles.Framework, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Pex.Framework, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="SharpTestsEx, Version=1.1.1.0, Culture=neutral, PublicKeyToken=8c60d8070630b1c1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\SharpTestsEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Sphinx.Client.Moles, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Test\Commands\Search\GeoAnchorTest.cs" />
+    <Compile Include="Test\Commands\CommandBaseTest.cs" />
+    <Compile Include="Mock\Commands\CommandResultBaseMock.cs" />
+    <Compile Include="Mock\IO\ArrayListFormatterFactoryMock.cs" />
+    <Compile Include="Test\Commands\CommandInfoTest.cs" />
+    <Compile Include="Test\Commands\CommandWithResultBaseTest.cs" />
+    <Compile Include="Test\Commands\CommandResultBaseTest.cs" />
+    <Compile Include="Test\Commands\BuildExcerpts\BuildExcerptsCommandResult_UnitTest.cs" />
+    <Compile Include="Mock\Connections\ConnectionMock.cs" />
+    <Compile Include="Mock\IO\ArrayListReaderMock.cs" />
+    <Compile Include="Mock\IO\ArrayListWriterMock.cs" />
+    <Compile Include="Mock\Network\StreamAdapterMock.cs" />
+    <Compile Include="Properties\PexAssemblyInfo.cs" />
+    <Compile Include="Test\Commands\BuildExcerpts\BuildExcerptsCommand_UnitTest.cs" />
+    <Compile Include="Test\Network\TcpClientSocket_UnitTest.cs" />
+    <Compile Include="Test\IO\BinaryFormatterFactory_UnitTest.cs" />
+    <Compile Include="Test\Helpers\CollectionUtil_UnitTest.cs" />
+    <Compile Include="Test\Helpers\DateTimeUtil_UnitTest.cs" />
+    <Compile Include="Helpers\XmlUtils.cs" />
+    <Compile Include="Mock\Commands\MockCommand.cs" />
+    <Compile Include="Mock\IO\XmlFormatterFactoryMock.cs" />
+    <Compile Include="Mock\IO\XmlReaderMock.cs" />
+    <Compile Include="Mock\IO\XmlWriterMock.cs" />
+    <Compile Include="Test\Commands\Collections\IndexListWithWildcard_UnitTest.cs" />
+    <Compile Include="Test\Commands\Collections\StringList_UnitTest.cs" />
+    <Compile Include="Mock\Network\ClientSocketMock.cs" />
+    <Compile Include="Test\Connections\PersistentTcpConnection_UnitTest.cs" />
+    <Compile Include="Test\Helpers\StringUtil_UnitTest.cs" />
+    <Compile Include="Test\Helpers\ArgumentAssert_UnitTest.cs" />
+    <Compile Include="Test\IO\BigEndianBinaryReader_UnitTest.cs" />
+    <Compile Include="Test\IO\BigEndianBinaryWriter_UnitTest.cs" />
+    <Compile Include="Test\Connections\TcpConnection_UnitTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Extensions\MyAssert.cs" />
+    <Compile Include="TestSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>TestSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Test\IO\BinaryFormattersMockUnitTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sphinx.Client\Sphinx.Client.csproj">
+      <Project>{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}</Project>
+      <Name>Sphinx.Client</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\Sphinx.Client.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Moles Include="Sphinx.Client.moles" />
+    <None Include="TestSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>TestSettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

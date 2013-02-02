@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{70EAC16F-7E16-44D6-BCCA-0F4238B11792}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Sphinx.Client.vsmdi = Sphinx.Client.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sphinx.Client", "Sphinx.Client\Sphinx.Client.csproj", "{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sphinx.Client.UnitTests", "Sphinx.Client.UnitTests\Sphinx.Client.UnitTests.csproj", "{9B6EC650-5C83-4B32-B11D-D8E79D958FD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sphinx.Client.IntegrationTests", "Sphinx.Client.IntegrationTests\Sphinx.Client.IntegrationTests.csproj", "{EDED5230-B20D-4647-AB1F-8DF3D0B17F9E}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Sphinx.Client.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B6EC650-5C83-4B32-B11D-D8E79D958FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6EC650-5C83-4B32-B11D-D8E79D958FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B6EC650-5C83-4B32-B11D-D8E79D958FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6EC650-5C83-4B32-B11D-D8E79D958FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDED5230-B20D-4647-AB1F-8DF3D0B17F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDED5230-B20D-4647-AB1F-8DF3D0B17F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDED5230-B20D-4647-AB1F-8DF3D0B17F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDED5230-B20D-4647-AB1F-8DF3D0B17F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
