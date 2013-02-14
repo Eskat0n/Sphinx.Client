@@ -31,7 +31,7 @@ namespace Sphinx.Client.Commands.Search
     public class SearchCommand : CommandWithResultBase<SearchCommandResult>
     {
         #region Constants
-        internal const short COMMAND_VERSION = 0x119;
+        internal const short COMMAND_VERSION = 0x118;
         private const int DEFAULT_MAX_QUERIES = 32;
         
         #endregion
