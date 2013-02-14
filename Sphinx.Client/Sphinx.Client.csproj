@@ -67,6 +67,7 @@
     <Compile Include="Commands\Attributes\Filters\Values\AttributeFilterValuesInt64.cs" />
     <Compile Include="Commands\Attributes\Filters\Values\AttributeFilterValuesBoolean.cs" />
     <Compile Include="Commands\Attributes\Filters\Values\AttributeFilterValuesDateTime.cs" />
+    <Compile Include="Commands\Attributes\Filters\Values\AttributeFilterValuesString.cs" />
     <Compile Include="Commands\Attributes\Update\AttributeUpdateString.cs" />
     <Compile Include="Commands\Attributes\Update\AttributeUpdateSinglePerDocumentBase.cs" />
     <Compile Include="Commands\Attributes\Update\AttributeUpdateMultiPerDocumentBase.cs" />
