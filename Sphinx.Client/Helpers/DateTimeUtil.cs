@@ -29,12 +29,12 @@ namespace Sphinx.Client.Helpers
         /// <summary>
         /// Unix epoch start date (lower boundary)
         /// </summary>
-        private static readonly DateTime _epoch = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+        private static readonly DateTime Epoch = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
 
         /// <summary>
         /// Unix Millennium problem date (upper boundary)
         /// </summary>
-        private static readonly DateTime _epochLimit = new DateTime(2038, 1, 19, 3, 14, 7, 0, DateTimeKind.Utc);
+        private static readonly DateTime EpochLimit = new DateTime(2038, 1, 19, 3, 14, 7, 0, DateTimeKind.Utc);
 
         /// <summary>
         /// Convert DateTime object to Unix timestamp signed integer value. 
@@ -44,8 +44,8 @@ namespace Sphinx.Client.Helpers
         /// <exception cref="ArgumentOutOfRangeException">DateTime value can't be converted to Unix timestamp due out of signed int range</exception>
         public static int ConvertToUnixTimestamp(DateTime dateTime)
         {
-            ArgumentAssert.IsInRange(dateTime, _epoch, _epochLimit, Messages.Exception_ArgumentDateTimeOutOfRangeUnixTimestamp);
-            TimeSpan diff = dateTime.ToUniversalTime() - _epoch;
+            ArgumentAssert.IsInRange(dateTime, Epoch, EpochLimit, Messages.Exception_ArgumentDateTimeOutOfRangeUnixTimestamp);
+            TimeSpan diff = dateTime - Epoch;
             return Convert.ToInt32(Math.Floor(diff.TotalSeconds));
         }
 
@@ -58,7 +58,7 @@ namespace Sphinx.Client.Helpers
         public static DateTime ConvertFromUnixTimestamp(int timestamp)
         {
             ArgumentAssert.IsGreaterOrEqual(timestamp, 0, Messages.Exception_ArgumentUnixTimestampOutOfRange);
-            return (_epoch + TimeSpan.FromSeconds(timestamp)).ToLocalTime();
+            return (Epoch + TimeSpan.FromSeconds(timestamp)).ToLocalTime();
         }
     }
 }
