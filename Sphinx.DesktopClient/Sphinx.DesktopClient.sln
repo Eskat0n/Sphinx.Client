@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sphinx.DesktopClient", "Sphinx.DesktopClient.csproj", "{DB50B662-B0C8-43CB-A22D-CE8C0D09217B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sphinx.Client", "..\Sphinx.Client\Sphinx.Client.csproj", "{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sphinx.Client.Tests", "..\Sphinx.Client.Tests\Sphinx.Client.Tests.csproj", "{17117907-99F3-4E5C-A76C-E851158275AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB50B662-B0C8-43CB-A22D-CE8C0D09217B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB50B662-B0C8-43CB-A22D-CE8C0D09217B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB50B662-B0C8-43CB-A22D-CE8C0D09217B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB50B662-B0C8-43CB-A22D-CE8C0D09217B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17117907-99F3-4E5C-A76C-E851158275AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17117907-99F3-4E5C-A76C-E851158275AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17117907-99F3-4E5C-A76C-E851158275AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17117907-99F3-4E5C-A76C-E851158275AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

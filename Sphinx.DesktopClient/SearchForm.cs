@@ -24,6 +24,8 @@ using System.Threading;
 
 namespace SearchDesktopClient
 {
+    using Sphinx.Client.Commands.Attributes.Filters.Range;
+
     public partial class SearchForm : Form
     {
         private const string RES_HEADER_TEMPLATE = "<html><head><style type='text/css'>html,body,table,p{ font-family: Tahoma,Verdana,Arial,sans-serif; font-size:8.25pt;} h1{ font-size: 12pt;} h2{ font-size: 10pt;} table{ border-collapse: collapse; } table td,table th{ padding: 2pt;}</style></head><body>";
@@ -185,6 +187,8 @@ namespace SearchDesktopClient
                 query.GroupBy = GroupBy;
                 query.GroupSort = GroupSortBy;
                 query.GroupDistinct = GroupDistinct;
+
+                query.AttributeFilters.Add(new AttributeFilterRangeDateTime("PublishDate", PublicationStartDate.Value, PublicationEndDate.Value, false));
 
                 // index weights
                 foreach (NameValuePair item in _indexWeights)
