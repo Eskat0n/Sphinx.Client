@@ -147,10 +147,6 @@ namespace Sphinx.Client.Connections
 				}
 				return _formatterFactory;
 			}
-			set
-			{
-				_formatterFactory = value;
-			}
 		}
 
 		#endregion
@@ -178,7 +174,7 @@ namespace Sphinx.Client.Connections
 		{
 			if (IsConnected) {
 				Socket.Close();
-				// NOTE: Formatter factory will be recreated after current connection has been closed
+				// NOTE: Formatter factory should be reinitialized only after current connection are closed
 				_formatterFactory = null; 
 			}
 		}

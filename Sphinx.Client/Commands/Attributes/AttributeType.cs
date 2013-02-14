@@ -32,15 +32,12 @@ namespace Sphinx.Client.Commands.Attributes
         Float = 5,
         Bigint = 6,
 		String = 7,
-		MultiInteger = Integer | MultiValueAttribute.MultiFlag,
-		MultiTimestamp = Timestamp | MultiValueAttribute.MultiFlag,
-		MultiOrdinal = Ordinal | MultiValueAttribute.MultiFlag,
-		MultiBoolean = Boolean | MultiValueAttribute.MultiFlag,
-		MultiFloat = Float | MultiValueAttribute.MultiFlag,
-		//MultiLong = Integer | MultiValueAttribute.Multi64Flag,
-		//MultiOrdinalLong = Ordinal | MultiValueAttribute.Multi64Flag,
-		//MultiDouble = Float | MultiValueAttribute.Multi64Flag,
-	}
+        MultiInteger = Integer | MultiValueAttribute.MultiFlag,
+        MultiTimestamp = Timestamp | MultiValueAttribute.MultiFlag,
+        MultiOrdinal = Ordinal | MultiValueAttribute.MultiFlag,
+        MultiBoolean = Boolean | MultiValueAttribute.MultiFlag,
+        MultiFloat = Float | MultiValueAttribute.MultiFlag,
+    }
 
 
     /// <summary>

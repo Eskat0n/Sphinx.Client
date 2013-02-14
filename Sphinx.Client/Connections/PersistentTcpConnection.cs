@@ -55,17 +55,7 @@ namespace Sphinx.Client.Connections
 		#endregion
 
 		#region Methods
-
-        /// <summary>
-        /// Open persistent connection to Sphinx server
-        /// </summary>
-	    public override void Open()
-	    {
-	        base.Open();
-            SendHandshake();
-	    }
-
-	    /// <summary>
+		/// <summary>
 		/// Send request to Sphinx server using underlying data stream and process server response. 
 		/// Connection behaviour is changed - underlying network connection will not closed until <see cref="PersistentTcpConnection.Close()"/> method is called or object is disposed.
 		/// </summary>
@@ -76,6 +66,7 @@ namespace Sphinx.Client.Connections
 			if (!IsConnected)
 			{
 				Open();
+				SendHandshake();
 			}
 			command.Serialize(DataStream);
 			DataStream.Flush();
@@ -89,7 +80,7 @@ namespace Sphinx.Client.Connections
 		protected override void SendHandshake()
 		{
 			base.SendHandshake();
-			// send ad-hoc 'persistent connection' command
+			// send 'persistent connection' command
 			IBinaryWriter writer = FormatterFactory.CreateWriter(DataStream);
 			_persistCommandInfo.Serialize(writer);
 			
@@ -97,8 +88,7 @@ namespace Sphinx.Client.Connections
 			writer.Write(sizeof(int));
 			// enable persistent connection boolean flag
 			writer.Write(PERSIST_COMMAND_BODY);
-            DataStream.Flush();
-        }
+		}
 		
 		#endregion
 	}

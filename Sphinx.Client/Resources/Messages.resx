@@ -148,7 +148,7 @@
     <value>Argument must be less than {0}</value>
   </data>
   <data name="Exception_ArgumentResultsSortModeNotValid" xml:space="preserve">
-    <value>SortBy property can not be empty if sorting mode '{0}' is selected</value>
+    <value>SortBy property can not be empty in selected sorting mode '{0}'</value>
   </data>
   <data name="Exception_BinaryFormatNotSupported" xml:space="preserve">
     <value>Specified binary format type '{0}' is unknown or not supported</value>
@@ -213,8 +213,5 @@ Server message: '{0}'.</value>
   </data>
   <data name="Exception_ArgumentDictionaryIsEmpty" xml:space="preserve">
     <value>Argument dictionary collection is empty</value>
-  </data>
-  <data name="Exception_ArgumentRankingExpressionIsEmpty" xml:space="preserve">
-    <value>RankingExpression can not be null or empty, if MatchRankMode.Expression is selected</value>
   </data>
 </root>

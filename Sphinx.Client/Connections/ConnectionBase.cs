@@ -136,7 +136,7 @@ namespace Sphinx.Client.Connections
 		/// <summary>
 		/// Returns <see cref="BinaryFormatterFactory"/> object to create binary formmater to (de)serialize data
 		/// </summary>
-		internal protected abstract IBinaryFormatterFactory FormatterFactory { get; set; }
+		internal protected abstract IBinaryFormatterFactory FormatterFactory { get; }
 
 		#endregion
 

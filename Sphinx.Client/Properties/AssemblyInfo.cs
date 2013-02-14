@@ -30,7 +30,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Sphinx.Client")]
-[assembly: AssemblyCopyright("Copyright Rustam Babadjanov 2009-2012")]
+[assembly: AssemblyCopyright("Copyright Rustam Babadjanov 2009-2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -57,8 +57,8 @@ using System.Runtime.CompilerServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("0.4.1.0")]
-[assembly: AssemblyFileVersion("0.4.1.0")]
+[assembly: AssemblyVersion("0.4.0.0")]
+[assembly: AssemblyFileVersion("0.4.0.0")]
 
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Sphinx.Client.UnitTests")]
 [assembly: InternalsVisibleTo("Sphinx.Client1.UnitTests")]

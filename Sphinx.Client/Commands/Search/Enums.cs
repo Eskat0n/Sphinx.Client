@@ -99,12 +99,7 @@ namespace Sphinx.Client.Commands.Search
 		/// <summary>
 		/// Added in version 1.10-beta, is generally based on the default ProximityBM25 ranker, but additionally boosts the matches when they occur in the very beginning or the very end of a text field. Thus, if a field equals the exact query, SPH04 should rank it higher than a field that contains the exact query but is not equal to it. (For instance, when the query is "Hyde Park", a document entitled "Hyde Park" should be ranked higher than a one entitled "Hyde Park, London" or "The Hyde Park Cafe".)
 		/// </summary>
-		Sph04 = 7,
-
-		/// <summary>
-		/// Added in version 2.0.2-beta, lets you specify the ranking formula in run time. It exposes a number of internal text factors and lets you define how the final weight should be computed from those factors. You can find more details about its syntax and a reference available factors in a subsection below.
-		/// </summary>
-		Expression = 8
+		Sph04 = 7
     }
 
     /// <summary>
