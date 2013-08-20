@@ -31,26 +31,14 @@ namespace Sphinx.Client.Commands.Attributes
         Boolean = 4,
         Float = 5,
         Bigint = 6,
-		String = 7,
-		MultiInteger = Integer | MultiValueAttribute.MultiFlag,
-		MultiTimestamp = Timestamp | MultiValueAttribute.MultiFlag,
-		MultiOrdinal = Ordinal | MultiValueAttribute.MultiFlag,
-		MultiBoolean = Boolean | MultiValueAttribute.MultiFlag,
-		MultiFloat = Float | MultiValueAttribute.MultiFlag,
-		//MultiLong = Integer | MultiValueAttribute.Multi64Flag,
-		//MultiOrdinalLong = Ordinal | MultiValueAttribute.Multi64Flag,
-		//MultiDouble = Float | MultiValueAttribute.Multi64Flag,
+        String = 7,
+        MultiInteger = 0x40000001,
+        MultiLong = 0x40000002
 	}
 
-
-    /// <summary>
-    /// Multivalue attribute flag
-    /// </summary>
     [Flags]
     public enum MultiValueAttribute : int
     {
         MultiFlag = 0x40000000
     }
-
-
 }
