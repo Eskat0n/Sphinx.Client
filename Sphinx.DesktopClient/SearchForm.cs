@@ -188,7 +188,7 @@ namespace SearchDesktopClient
                 query.GroupSort = GroupSortBy;
                 query.GroupDistinct = GroupDistinct;
 
-                query.AttributeFilters.Add(new AttributeFilterRangeDateTime("PublishDate", PublicationStartDate.Value, PublicationEndDate.Value, false));
+                //query.AttributeFilters.Add(new AttributeFilterRangeDateTime("PublishDate", PublicationStartDate.Value, PublicationEndDate.Value, false));
 
                 // index weights
                 foreach (NameValuePair item in _indexWeights)

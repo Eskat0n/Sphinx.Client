@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sphinx.DesktopClient", "Sphinx.DesktopClient\Sphinx.DesktopClient.csproj", "{DB50B662-B0C8-43CB-A22D-CE8C0D09217B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sphinx.Client", "Sphinx.Client\Sphinx.Client.csproj", "{DA4B099D-BD73-4FDF-8B6F-FF690D076BC0}"
