@@ -72,6 +72,7 @@
     <Compile Include="Commands\Attributes\Update\AttributeUpdateSinglePerDocumentBase.cs" />
     <Compile Include="Commands\Attributes\Update\AttributeUpdateMultiPerDocumentBase.cs" />
     <Compile Include="Commands\Attributes\Values\AttributeValueInt32.cs" />
+    <Compile Include="Commands\Attributes\Values\AttributeValuesInt64.cs" />
     <Compile Include="Commands\BuildExcerpts\Enums.cs" />
     <Compile Include="Commands\Collections\DocumentList.cs" />
     <Compile Include="Commands\Collections\StringList.cs" />
@@ -100,11 +101,7 @@
     <Compile Include="Commands\Attributes\Update\AttributeUpdateInt32.cs" />
     <Compile Include="Commands\Attributes\Update\AttributeUpdateOrdinal.cs" />
     <Compile Include="Commands\Attributes\Update\AttributeUpdateDateTime.cs" />
-    <Compile Include="Commands\Attributes\Update\AttributeUpdateMultiBoolean.cs" />
-    <Compile Include="Commands\Attributes\Update\AttributeUpdateMultiFloat.cs" />
     <Compile Include="Commands\Attributes\Update\AttributeUpdateMultiInt32.cs" />
-    <Compile Include="Commands\Attributes\Update\AttributeUpdateMultiOrdinal.cs" />
-    <Compile Include="Commands\Attributes\Update\AttributeUpdateMultiDateTime.cs" />
     <Compile Include="Commands\BuildExcerpts\BuildExcerptsCommandResult.cs" />
     <Compile Include="Commands\BuildKeywords\BuildKeywordsCommandResult.cs" />
     <Compile Include="Commands\BuildKeywords\KeywordInfo.cs" />
@@ -142,12 +139,8 @@
     <Compile Include="Commands\Attributes\Values\AttributeValueDateTime.cs" />
     <Compile Include="Commands\Attributes\Values\AttributeValueBoolean.cs" />
     <Compile Include="Commands\Attributes\Values\AttributeValueInt64.cs" />
-    <Compile Include="Commands\Attributes\Values\AttributeValuesBoolean.cs" />
-    <Compile Include="Commands\Attributes\Values\AttributeValuesDateTime.cs" />
-    <Compile Include="Commands\Attributes\Values\AttributeValuesFloat.cs" />
     <Compile Include="Commands\Attributes\Values\AttributeValuesInt32.cs" />
     <Compile Include="Commands\Attributes\Values\AttributeValueOrdinal.cs" />
-    <Compile Include="Commands\Attributes\Values\AttributeValuesOrdinal.cs" />
     <Compile Include="Commands\Attributes\Values\IAttributeValues.cs" />
     <Compile Include="Commands\Attributes\Values\IAttributeValue.cs" />
     <Compile Include="Commands\Search\AttributeFilterList.cs" />

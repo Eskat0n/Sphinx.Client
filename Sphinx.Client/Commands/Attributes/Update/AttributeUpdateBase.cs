@@ -65,17 +65,8 @@ namespace Sphinx.Client.Commands.Attributes.Update
                     return new AttributeUpdateBoolean();
                 case AttributeType.Ordinal:
                     return new AttributeUpdateOrdinal();
-                case AttributeType.MultiBoolean:
-                    return new AttributeUpdateMultiBoolean();
-                case AttributeType.MultiFloat:
-                    return new AttributeUpdateMultiFloat();
                 case AttributeType.MultiInteger:
                     return new AttributeUpdateMultiInt32();
-                case AttributeType.MultiOrdinal:
-                    return new AttributeUpdateMultiOrdinal();
-                case AttributeType.MultiTimestamp:
-                    return new AttributeUpdateMultiDateTime();
-                // NOTE: Bigint (64-bit) attribute type currently is not supported by Sphinx server (0.9.9-rc2)
             }
             throw new NotSupportedException(String.Format(Messages.Exception_UnsupportedAttributeType, Enum.GetName(typeof(AttributeType), type)));
         }
