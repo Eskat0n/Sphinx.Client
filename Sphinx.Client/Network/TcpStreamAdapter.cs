@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading;
 using Sphinx.Client.Helpers;
 using Sphinx.Client.Resources;
@@ -44,6 +42,11 @@ namespace Sphinx.Client.Network
 				_resetEvent.Reset();
 				Stream.BeginRead(buffer, length - state.BytesLeft, state.BytesLeft, ReadDataCallback, state);
 				WaitForNetworkData();
+
+				if (!string.IsNullOrEmpty(state.ErrorMessage))
+				{
+					throw new IOException(state.ErrorMessage);
+				}
 			}
 			return length;
 		}
@@ -66,19 +69,41 @@ namespace Sphinx.Client.Network
 		private void ReadDataCallback(IAsyncResult asyncResult)
 		{
 			NetworkReadState state = ((NetworkReadState)asyncResult.AsyncState);
-			if (!state.DataStream.CanRead)
-				throw new IOException(String.Format(Messages.Exception_CouldNotReadFromStream, state.BytesLeft, 0));
-			int actualBytes = state.DataStream.EndRead(asyncResult);
-			if (actualBytes == 0)
-				throw new IOException(String.Format(Messages.Exception_CouldNotReadFromStream, state.BytesLeft, actualBytes));
-			state.BytesLeft -= actualBytes;
-			_resetEvent.Set();
+			try
+			{
+				if (!state.DataStream.CanRead)
+				{
+					state.ErrorMessage = String.Format(Messages.Exception_CouldNotReadFromStream, state.BytesLeft, 0);
+				}
+				else
+				{
+
+					int actualBytes = state.DataStream.EndRead(asyncResult);
+					if (actualBytes == 0)
+					{
+						state.ErrorMessage = String.Format(Messages.Exception_CouldNotReadFromStream, state.BytesLeft, actualBytes);
+					}
+					else
+					{
+						state.BytesLeft -= actualBytes;
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				state.ErrorMessage = ex.ToString();
+			}
+			finally
+			{
+				_resetEvent.Set();
+			}
 		}
 
 		private class NetworkReadState
 		{
 			public Stream DataStream;
 			public int BytesLeft;
+			public string ErrorMessage;
 		}
  
 		#endregion	
