@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Sphinx.Client</id>
+    <version>1.0.1.0</version>
+    <title>Sphinx.Client</title>
+    <authors>eionov Eskat0n starasov</authors>
+    <owners>eionov Eskat0n starasov</owners>
+    <licenseUrl>http://www.gnu.org/licenses/lgpl.html</licenseUrl>
+    <projectUrl>https://github.com/s-tarasov/Sphinx.Client</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Open source .NET library which provides advanced client API to use Sphinx search server services, using Sphinx native binary protocol. It can be used from C#, VB.Net etc.</description>
+    <tags>Sphinx</tags>
+  </metadata>
+</package>
