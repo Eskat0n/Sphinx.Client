@@ -1,0 +1,1 @@
+nuget pack Sphinx.Client.csproj -properties Configuration=Release
