@@ -446,8 +446,8 @@ namespace Sphinx.Client.Commands.Search
 		{
 			ArgumentAssert.IsNotNull(Query, "Query");
 			ArgumentAssert.IsInRange(Offset, 0, int.MaxValue, "Offset");
-			ArgumentAssert.IsInRange(Limit, 1, int.MaxValue, "Limit");
-			ArgumentAssert.IsInRange(MaxMatches, 1, int.MaxValue, "MaxMatches");
+			ArgumentAssert.IsInRange(Limit, 0, int.MaxValue, "Limit");
+			ArgumentAssert.IsInRange(MaxMatches, 0, int.MaxValue, "MaxMatches");
 			ArgumentAssert.IsInRange(Cutoff, 0, int.MaxValue, "Cutoff");
 			ArgumentAssert.IsDefinedInEnum(typeof(MatchMode), MatchMode, "MatchMode");
 			ArgumentAssert.IsDefinedInEnum(typeof(ResultsSortMode), SortMode, "SortMode");
