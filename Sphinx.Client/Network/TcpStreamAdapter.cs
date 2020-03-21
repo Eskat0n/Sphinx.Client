@@ -43,7 +43,13 @@ namespace Sphinx.Client.Network
 			{
 				_resetEvent.Reset();
 				Stream.BeginRead(buffer, length - state.BytesLeft, state.BytesLeft, ReadDataCallback, state);
+				
 				WaitForNetworkData();
+				
+				if (state.Exception != null) 
+				{
+					throw state.Exception;
+				}
 			}
 			return length;
 		}
@@ -66,19 +72,30 @@ namespace Sphinx.Client.Network
 		private void ReadDataCallback(IAsyncResult asyncResult)
 		{
 			NetworkReadState state = ((NetworkReadState)asyncResult.AsyncState);
-			if (!state.DataStream.CanRead)
-				throw new IOException(String.Format(Messages.Exception_CouldNotReadFromStream, state.BytesLeft, 0));
-			int actualBytes = state.DataStream.EndRead(asyncResult);
-			if (actualBytes == 0)
-				throw new IOException(String.Format(Messages.Exception_CouldNotReadFromStream, state.BytesLeft, actualBytes));
-			state.BytesLeft -= actualBytes;
-			_resetEvent.Set();
+			try 
+			{
+				if (!state.DataStream.CanRead)
+					throw new IOException(String.Format(Messages.Exception_CouldNotReadFromStream, state.BytesLeft, 0));
+				int actualBytes = state.DataStream.EndRead(asyncResult);
+				if (actualBytes == 0)
+					throw new IOException(String.Format(Messages.Exception_CouldNotReadFromStream, state.BytesLeft, actualBytes));
+				state.BytesLeft -= actualBytes;
+			} 
+			catch (Exception ex) 
+			{
+				state.Exception = ex;
+			} 
+			finally 
+			{
+				_resetEvent.Set();
+			}
 		}
 
 		private class NetworkReadState
 		{
 			public Stream DataStream;
 			public int BytesLeft;
+			public Exception Exception;
 		}
  
 		#endregion	
